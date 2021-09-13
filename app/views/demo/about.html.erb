@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Page</title>
+</head>
+<body>
+  <h2>About Us</h2>
+
+  <p>
+    Dolor eaque dolore molestias doloremque expedita a? 
+    Sed necessitatibus ad ut non velit?
+  </p><br>
+
+  <p>
+    Sit placeat sint veniam voluptate eum ducimus 
+    Dolor corporis quibusdam placeat rerum rem
+  </p>
+
+  <h4>Contact:</h4>
+
+  <p>We are always to hear from our customers.</p>
+
+  <p><strong>Phone: <%= @phone %></strong></p>
+
+  <p>Press: <%= link_to('Contact Page', {
+    action: 'contact',
+    id: 'us'
+  }) %></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Users</title>
+</head>
+<body>
+  <h2>All the Users</h2>
+  <ul>
+    <% @users.each do |user| %>
+     <li><%= user.capitalize %></li>
+   <% end %>
+  </ul>
+</body>
+</html>

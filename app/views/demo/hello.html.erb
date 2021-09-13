@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Template</title>
+</head>
+<body>
+
+  <h2>Hello Guys</h2>
+
+  <p><%= 13 + 42 %></p><br>
+
+      <% target = 'guys' %>
+      <%= "Hi There, #{target.capitalize}!" %><br>
+
+          <% @array.size.times do |num| %>
+            <p><%= num + 1 %></p>
+          <% end %><br>
+
+          <!--<p><a href="/demo/index">Home Page</a></p>-->
+          <p><%= link_to('Home Page#', action: 'index') %></p><br>
+
+          <p><strong>ID:</strong> <%= @id %> | </p>
+          <p><strong>ID:</strong> <%= params[:id] %> | </p><br>
+
+          <p><strong>PAGE:</strong> <%= @page %> | </p>
+          <p><strong>PAGE:</strong> <%= params[:page] %> | </p>
+          <p>Next Page: <%= @page + 1.to_s %></p>
+          
+</body>
+</html>

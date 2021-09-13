@@ -1,2 +1,11 @@
 <h1>Nice Try!</h1>
-<p>Keep pushing.</p>
+  <p>Keep pushing.</p><br>
+  <!--<p><a href="/demo/hello">Hello Page</a></p>-->
+  <p><%= link_to('Hello Page#', action: 'hello') %></p>
+
+  <br>
+  <p><%= link_to('Hello with Params', {
+    action: 'hello',
+    page: 5,
+    id: 20
+  }) %></p>

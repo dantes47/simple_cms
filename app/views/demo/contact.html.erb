@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Page</title>
+</head>
+<body>
+  <h2>Contact Us</h2>
+
+  <p>
+    Lorem ipsam rem illum accusantium architecto. 
+    Natus est necessitatibus totam reiciendis saepe consequuntur?
+  </p><br>
+
+  <h4>Our Number in: <%= params[:id].upcase %></h4>
+  <p><strong>Phone: <%= @country %></strong></p>
+
+  <p><%= link_to('About Us', {
+    action: 'about',
+    id: 'us'
+  }) %></p>
+
+</body>
+</html>
