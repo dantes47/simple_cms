@@ -2,19 +2,55 @@
 
 # class Pages Controller
 class PagesController < ApplicationController
-  def index; end
+  def index
+    @pages = Page.order('position ASC')
+  end
 
-  def show; end
+  def show
+    @page = Page.find(params[:id])
+  end
 
-  def new; end
+  def new
+    @page = Page.new
+  end
 
-  def create; end
+  def create
+    @page = Page.new(page_params)
 
-  def edit; end
+    @page.save ? redirect_to(pages_path) : render('new')
+  end
 
-  def update; end
+  def edit
+    @page = Page.find(params[:id])
+  end
 
-  def delete; end
+  def update
+    @page = Page.find(params[:id])
+    if @page.update(page_params)
+      redirect_to(pages_path(@page))
+    else
+      render('edit')
+    end
+  end
 
-  def destroy; end
+  def delete
+    @page = Page.find(params[:id])
+  end
+
+  def destroy
+    @page = Page.find(params[:id])
+    @page.destroy
+
+    redirect_to(pages_path)
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(
+      :name, :visible,
+      :position, :permalink,
+      :content, :subject_id
+    )
+  end
 end
